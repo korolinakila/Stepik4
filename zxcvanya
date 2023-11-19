@@ -1,0 +1,34 @@
+#include <iostream>
+#include <string>
+#include<fstream>
+using namespace std;
+long long itc_len(string str){
+    long long k;
+    for(long long i=0; str[i]!='\0'; i++){
+    k = i;
+    }
+    return k+1;
+}   //2
+int main() {
+    ifstream file;
+    string input;
+    char k;
+    int m=0, h=0;;
+    file.open("k8-6.txt");
+    while (file >> input){
+    }
+    for(int i =0; i<itc_len(input); i++){
+        if (input[i]==input[i+1]){
+            m+=1;
+        }
+        if(h<m){
+            k = input[i];
+            h=m;
+        }
+        if (input[i]!=input[i+1]){
+            m=0;
+        }
+    }
+    cout << k << " " << h;
+    return 0;
+}
